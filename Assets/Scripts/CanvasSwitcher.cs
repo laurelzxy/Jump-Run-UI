@@ -5,6 +5,7 @@ public class CanvasSwitcher : MonoBehaviour
     [Header("Canvases")]
     public GameObject menuCanvas;
     public GameObject gameCanvas;
+    public GameObject characterCanvas;
     public GameObject settingsCanvas;
     public GameObject creditsCanvas;
     public GameObject multiplayerCanvas;
@@ -25,6 +26,14 @@ public class CanvasSwitcher : MonoBehaviour
         if (menuCanvas != null) menuCanvas.SetActive(false);
         if (multiplayerCanvas != null) multiplayerCanvas.SetActive(true);
     }
+
+    public void OpenCharacters()
+    {
+        PlayButtonSound();
+        if(menuCanvas != null) menuCanvas.SetActive(false);
+        if(characterCanvas != null) characterCanvas.SetActive(true);
+    }
+
 
     public void OpenSettings()
     {

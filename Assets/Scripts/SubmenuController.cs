@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class TabManager : MonoBehaviour
+public class SubMenuController : MonoBehaviour
 {
     [Header("Abas")]
     public Button gameplayButton;

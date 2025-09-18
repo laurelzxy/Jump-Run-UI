@@ -9,6 +9,9 @@ public class CanvasSwitcher : MonoBehaviour
     public GameObject settingsCanvas;
     public GameObject creditsCanvas;
     public GameObject multiplayerCanvas;
+    public GameObject rooomCanvas;
+    public GameObject createCanvas;
+
 
     [Header("Audio")]
     public AudioSource buttonSound; // arraste o AudioSource aqui no inspector
@@ -49,6 +52,13 @@ public class CanvasSwitcher : MonoBehaviour
         if (creditsCanvas != null) creditsCanvas.SetActive(true);
     }
 
+    public void OpenMultiplayer()
+    {
+        PlayButtonSound();
+        if (multiplayerCanvas != null) multiplayerCanvas.SetActive(false);
+        if (rooomCanvas != null) rooomCanvas.SetActive(true);
+    }
+
     public void ExitGame()
     {
         PlayButtonSound();
@@ -56,13 +66,22 @@ public class CanvasSwitcher : MonoBehaviour
         Debug.Log("Jogo fechado.");
     }
 
+    public void BackMulti()
+    {
+               PlayButtonSound();
+        if (rooomCanvas != null) rooomCanvas.SetActive(false);
+        if (multiplayerCanvas != null) multiplayerCanvas.SetActive(true);
+    }
     public void BackToMenu()
     {
         PlayButtonSound();
         if (gameCanvas != null) gameCanvas.SetActive(false);
+        if (characterCanvas != null) characterCanvas.SetActive(false);
         if (settingsCanvas != null) settingsCanvas.SetActive(false);
         if (creditsCanvas != null) creditsCanvas.SetActive(false);
         if (multiplayerCanvas != null) multiplayerCanvas.SetActive(false);
+        if (rooomCanvas != null) rooomCanvas.SetActive(false);
+
 
         if (menuCanvas != null) menuCanvas.SetActive(true);
     }

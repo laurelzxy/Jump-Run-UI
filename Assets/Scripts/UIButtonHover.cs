@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
 
-public class UIButtonHoverTMP : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class UIButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Referências")]
     public Image icon;                 // Ícone do botão
